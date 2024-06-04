@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase bot</title>
+    <link rel="icon" href="{{ url_for('static', filename="logo/mastodon.svg") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
+</head>
+<body>
+    <h1 class="text-center">Welcome to Showcase bot!</h1>
+    <p class="text-center">A mastodon bot written in python and flask. Show you project on mastodon!</p>
+    <div class="flex">
+        <img src="{{ url_for("static", filename="logo/mastodon.svg") }}" alt="Mastodon logo (original)">
+    </div>
+    <h2 class="text-center">Posted!</h2>
+</body>
+</html>
