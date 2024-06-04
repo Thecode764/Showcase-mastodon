@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase bot</title>
+    <link rel="icon" href="{{ url_for('static', filename="logo/mastodon.svg") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
+</head>
+<body>
+    <h1 class="text-center">Welcome to Showcase bot!</h1>
+    <p class="text-center">A mastodon bot written in python and flask. Show you project on mastodon!</p>
+    <div class="flex">
+        <img src="{{ url_for("static", filename="logo/mastodon.svg") }}" alt="Mastodon logo (original)">
+    </div>
+    <h2 class="text-center">Level 1 🤖</h2>
+    <h5 class="text-center" id="level-1-how"></h5>
+    <h2 class="text-center">Level 2 🤖</h2>
+    <div class="flex">
+
+    <form method="post">
+        <label>Access token: </label>
+        <input type="text" id="access_token" name="access_token" id="access_token">
+        <br><br>
+        <label>Mastodon base url: </label>
+        <input type="text" id="base_url" name="base_url">
+        <br><br>
+        <label>Project name: </label>
+        <input type="text" id="project_name" name="project_name">
+        <br><br>
+        <label>Project description: </label>
+        <textarea name="project_description" id="project_description"></textarea>
+        <br><br>
+        <label>Project source url:</label>
+        <input type="text" name="project_source_url" id="project_source_url">
+        <button type="submit">Submit!</button>
+    </form>
+
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#level-1-how', {
+            strings: ['Go to your mastodon developer setting', 'Click at New application', 'Set application name to "Showcase bot"', 'Access bot to all permissions', 'Go to level 2'],
+            typeSpeed: 50,
+            showCursor: false
+        });
+    </script>
+</body>
+</html>
